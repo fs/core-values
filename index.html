@@ -3,26 +3,66 @@
   <head>
     <title>Flatstack Core Values</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Core Values">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="fs-180.png">
     <style>
+      html {
+        -webkit-text-size-adjust: 100%;
+      }
+
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      #values-wrap {
+        display: table;
+        height: 85%;
+        width: 100%;
+        color: #333;
+      }
+
       #core-value {
+        display: table-cell;
         text-align: center;
-        font-size: 4em
+        font: 4rem/1.4 Helvetica Neue, Helvetica, Arial, sans-serif;
+        vertical-align: middle;
+        margin: 0;
+        padding: 0 1em;
+      }
+
+      @media (max-width: 768px) {
+        html {
+          font-size: 12px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        html {
+          font-size: 8px;
+        }
       }
     </style>
   </head>
   <body>
-    <p id="core-value"></p>
+    <div id="values-wrap">
+      <p id="core-value"></p>
+    </div>
     <script>
       var coreValues = [
-        "Set People up to Succeed <br> Believe in Them",
+        "Set People up to Succeed<br>Believe in Them",
         "Great Work is a Matter of Pride",
         "Doing &gt; Talking",
-        "Be Curious & Never Stop Learning",
-        "Innovate <br> Make mistakes <br> Learn",
-        "Flatten the World & Explore it",
-        "Communicate Transparently & Honestly",
-        "Work Hard <br> Play Hard",
-        "Win, Win, Win = Customers, Employees, Company",
+        "Be Curious &amp; Never Stop Learning",
+        "Innovate<br>Make mistakes<br>Learn",
+        "Flatten the World &amp; Explore it",
+        "Communicate Transparently &amp; Honestly",
+        "Work Hard<br>Play Hard",
+        "Win, Win, Win<br>=<br>Customers, Employees, Company",
         "Create Awesomeness"
       ];
 
@@ -31,7 +71,8 @@
         document.getElementById("core-value").innerHTML = coreValues[following];
       }
 
-      setInterval(trulyRandom, 25000);
+      trulyRandom();
+      setInterval(trulyRandom, 15000);
     </script>
   </body>
 </html>
