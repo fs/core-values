@@ -4,14 +4,31 @@
     <title>Flatstack Core Values</title>
     <meta charset="UTF-8">
     <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      #values-wrap {
+        display: table;
+        height: 85%;
+        width: 100%;
+      }
+
       #core-value {
+        display: table-cell;
         text-align: center;
-        font-size: 4em
+        font-size: 4em;
+        vertical-align: middle;
+        margin: 0;
       }
     </style>
   </head>
   <body>
-    <p id="core-value"></p>
+    <div id="values-wrap">
+      <p id="core-value"></p>
+    </div>
     <script>
       var coreValues = [
         "Set People up to Succeed <br> Believe in Them",
@@ -31,6 +48,7 @@
         document.getElementById("core-value").innerHTML = coreValues[following];
       }
 
+      trulyRandom();
       setInterval(trulyRandom, 25000);
     </script>
   </body>
