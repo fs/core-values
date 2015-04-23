@@ -9,5 +9,5 @@ TODO:
 * [x] респонсив стили: страничка должна отлично смотреться и на iphone/android (+ meta viewport)
 * [x] добавить iphone/android иконки, чтобы приложение можно было добавить на home screen:
       http://designmodo.com/create-icons-ios-android/
-* [ ] офлайн версия (MANIFEST.mf)
-* [ ] выложить в Гитхаб: fs.github.io/core-values
+* [x] офлайн версия (MANIFEST.mf)
+* [x] выложить в Гитхаб: fs.github.io/core-values
