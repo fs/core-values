@@ -4,7 +4,7 @@
     <title>Flatstack Core Values</title>
     <meta charset="UTF-8">
     <style>
-      p#core-value {
+      #core-value {
         text-align: center;
         font-size: 4em
       }
@@ -27,7 +27,8 @@
       ];
 
       var trulyRandom = function() {
-        document.getElementById("core-value").innerHTML = coreValues[Math.floor(Math.random()*coreValues.length)];
+        var following = Math.floor(Math.random() * coreValues.length);
+        document.getElementById("core-value").innerHTML = coreValues[following];
       }
 
       setInterval(trulyRandom, 25000);
