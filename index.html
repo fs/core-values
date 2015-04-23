@@ -20,9 +20,22 @@
       #core-value {
         display: table-cell;
         text-align: center;
-        font: 4em/1.4 Helvetica Neue, Helvetica, Arial, sans-serif;
+        font: 4rem/1.4 Helvetica Neue, Helvetica, Arial, sans-serif;
         vertical-align: middle;
         margin: 0;
+        padding: 0 1em;
+      }
+
+      @media (max-width: 768px) {
+        html {
+          font-size: 12px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        html {
+          font-size: 10px;
+        }
       }
     </style>
   </head>
