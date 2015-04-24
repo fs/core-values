@@ -47,32 +47,7 @@
         }
       }
     </style>
-  </head>
-  <body>
-    <div id="values-wrap">
-      <p id="core-value"></p>
-    </div>
     <script>
-      var coreValues = [
-        "Set People up to Succeed<br>Believe in Them",
-        "Great Work is a Matter of Pride",
-        "Doing &gt; Talking",
-        "Be&nbsp;Curious&nbsp;&amp; Never Stop Learning",
-        "Innovate<br>Make mistakes<br>Learn",
-        "Flatten the&nbsp;World&nbsp;&amp; Explore it",
-        "Communicate Transparently&nbsp;&amp; Honestly",
-        "Work Hard<br>Play Hard",
-        "Win, Win, Win<br>=<br>Customers, Employees, Company",
-        "Create Awesomeness"
-      ];
-
-      var trulyRandom = function() {
-        var following = Math.floor(Math.random() * coreValues.length);
-        document.getElementById("core-value").innerHTML = coreValues[following];
-      }
-
-      trulyRandom();
-
       /*
        * Author: Alex Gibson
        * https://github.com/alexgibson/shake.js
@@ -202,6 +177,32 @@
 
           return Shake;
       }));
+    </script>
+  </head>
+  <body>
+    <div id="values-wrap">
+      <p id="core-value"></p>
+    </div>
+    <script>
+      var coreValues = [
+        "Set People up to Succeed<br>Believe in Them",
+        "Great Work is a Matter of Pride",
+        "Doing &gt; Talking",
+        "Be&nbsp;Curious&nbsp;&amp; Never Stop Learning",
+        "Innovate<br>Make mistakes<br>Learn",
+        "Flatten the&nbsp;World&nbsp;&amp; Explore it",
+        "Communicate Transparently&nbsp;&amp; Honestly",
+        "Work Hard<br>Play Hard",
+        "Win, Win, Win<br>=<br>Customers, Employees, Company",
+        "Create Awesomeness"
+      ];
+
+      var trulyRandom = function() {
+        var following = Math.floor(Math.random() * coreValues.length);
+        document.getElementById("core-value").innerHTML = coreValues[following];
+      }
+
+      trulyRandom();
 
       var myShakeEvent = new Shake({
           threshold: 15, // optional shake strength threshold
@@ -210,11 +211,7 @@
 
       myShakeEvent.start();
 
-      window.addEventListener('shake', shakeEventDidOccur, false);
-
-      function shakeEventDidOccur () {
-          trulyRandom;
-      }
+      window.addEventListener('shake', trulyRandom, false);
     </script>
   </body>
 </html>
